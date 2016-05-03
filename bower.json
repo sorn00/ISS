@@ -1,0 +1,24 @@
+{
+  "name": "MWT",
+  "version": "0.0.1",
+  "description": "Mobile Titration App.",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3",
+    "angular": "~1.4",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.2",
+    "angular-cookies": "~1.4.0",
+    "angular-animate": "~1.2",
+    "angular-mocks": "~1.2",
+    "html5-boilerplate": "~5.2.0",
+    "angular-aria": "~1.4.1",
+    "angular-bootstrap": "~0.12.0",
+    "angular-ui-utils": "~0.1.1",
+    "angular-ui-router": "~0.2.11",
+    "angular-hamburger-toggle": "~0.2.0",
+    "angular-material": "~0.11.2",
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0"
+  }
+}
