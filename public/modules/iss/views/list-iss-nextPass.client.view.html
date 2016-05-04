@@ -1,0 +1,77 @@
+<div flex="100" layout="row" data-ng-controller="IssDisplayPassTimes">
+
+	<div flex="50" layout="row" layout-align="center start">
+
+		<md-content layout-padding>
+			<div>
+				<h2>Contact Details</h2>
+			</div>
+			<div>
+				<form  name="contactDetailsForm" ng-submit="addContactDetails()">
+					<div layout-gt-sm="row">
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>First name</label>
+							<input ng-model="contactDetails.firstName" name="firstName" required>
+							<div ng-messages="contactDetailsForm.firstName.$error">
+								<div ng-message="required">Required.</div>
+							</div>
+						</md-input-container>
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>Last Name</label>
+							<input ng-model="contactDetails.lastName" name="lastName" required>
+							<div ng-messages="contactDetailsForm.lastName.$error">
+								<div ng-message="required">Required.</div>
+							</div>
+						</md-input-container>
+					</div>
+					<div layout-gt-sm="row">
+						<md-input-container class="md-block" flex-gt-sm>
+							<label>State</label>
+							<md-select ng-model="contactDetails.cityGeoCode" required name="cityGeoCode">
+								<md-option ng-repeat="cityGeoCode in cityGeoCodes" value="{{cityGeoCode.ll}}" >
+									{{cityGeoCode.city}}
+								</md-option>
+							</md-select>
+							<div class="errors" ng-messages="contactDetailsForm.cityGeoCode.$error">
+								<div ng-message="required">Required</div>
+							</div>
+						</md-input-container>
+					</div>
+					<div>
+						<md-button class="md-raised md-primary" ng-disabled="contactDetailsForm.$invalid"   type="submit">Save Contact</md-button>
+					</div>
+				</form>
+			</div>
+		</md-content>
+
+	</div>
+	<div flex="50" layout="row" layout-align="center start">
+
+		<div ng-show="!isloading" layout-align="center center" >
+			<div layout-align="center center">
+				<h2>Next ISS Fly over</h2>
+			</div>
+
+			<div layout-align="center center">
+				<span layout-align="center center" ng-repeat="contactDetail in contactDetailsObj track by $index">
+				{{contactDetail.firstName}}&nbsp;{{contactDetail.lastName}}&nbsp;{{contactDetail.riseTime.toString()}}<br>
+				</span>
+				<span ng-show="contactDetailsObj.length < 2">
+					No Contacts currently added
+				</span>
+			</div>
+
+		</div>
+		<div ng-show="isloading" layout-align="center center">
+			<p>
+				Loading....
+			</p>
+
+		</div>
+
+	</div>
+
+
+</div>
+
+

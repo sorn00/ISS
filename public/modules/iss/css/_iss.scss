@@ -1,0 +1,88 @@
+.patientsBackground
+{
+	width: 100%;
+	height: 100%;
+	background-color:#F9F9F9;
+}
+
+.contentArea {
+	width: 70vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.haspatientheader{
+
+	margin-top: 131px;
+
+}
+
+.patient-button {
+  width: 100%
+}
+
+md-list-item.md-3-line :hover
+{
+	background-color: #66CCFF;
+}
+
+ table.patientData, th.patientData, td.patientData{
+	border: 1px solid #E4E4E4;
+	border-collapse: collapse;
+}
+
+.adherenceHypoEventLabel{
+	float: left;
+	font-size: 13px;
+	padding-left: 5px;
+}
+
+.adherenceSymptomLabel{
+	color: #000;
+	float: left;
+	font-size: 13px;
+	padding-left: 5px;
+}
+
+.adherenceTd{
+	height: 38px;
+	text-align: center;
+}
+
+.adherenceTh{
+	height: 38px;
+	text-align: center;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	color: #333333;
+	font-size: 14px;
+}
+
+.adherenceRowHeader{
+	height: 38px;
+	text-align: center;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	color: #333333;
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.RegularFont{
+
+	font-weight:500;
+	font-size:14px;
+	color: #333333;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+}
+
+/*
+.datepickerdemoBasicUsage {
+	 }
+.datepickerdemoBasicUsage md-content {
+	padding-bottom: 200px; }
+.datepickerdemoBasicUsage .validation-messages {
+	font-size: 11px;
+	color: darkred;
+	margin: 10px 0 0 25px; }
+*/
