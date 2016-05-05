@@ -1,4 +1,5 @@
-app/
-
+app/tests/
 public/lib/
 
+
+.idea/workspace.xml

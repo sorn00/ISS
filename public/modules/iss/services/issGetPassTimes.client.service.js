@@ -1,6 +1,6 @@
 'use strict';
 
-//Patient service used to communicate Patient REST endpoints
+//Pass time service used to communicate ISS  endpoints returns next pass time 
 angular.module('iss').factory('issGetPassTimes', ['$resource','configService',
 	function($resource,configService) {
 
@@ -10,14 +10,9 @@ angular.module('iss').factory('issGetPassTimes', ['$resource','configService',
 			getNextPassTime: {
 				method: "JSONP"
 
-				//url: configService.issPassTimesApi + 'n=1&lat=:LAT&lon=:LON:callback=?',
 
 			}
-			/*,
-			update: {
-				method: 'PUT',
-				url: configService.api + 'patient/:patientId/careplan/:dosePlanId'
-			},*/
+
 
 		});
 
@@ -25,12 +20,4 @@ angular.module('iss').factory('issGetPassTimes', ['$resource','configService',
 	}
 ]);
 
-
-
-
-/*
-
-http://api.open-notify.org/iss-pass.json?lat=-80.0&lon=45.0&alt=20&n=5&callback=?
-	http://api.open-notify.org/iss-pass.json?lat=-80.0&lon=-112.3&alt=20&n=5&callback=?
-*/
 

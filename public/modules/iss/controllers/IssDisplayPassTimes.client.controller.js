@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('iss').controller('IssDisplayPassTimes', ['$scope', '$http', '$location','$localStorage','$log', 'issGetPassTimes', 'notifyFactory','contactDetails','cityGeoCodes',
-	function($scope,$http, $location,$localStorage,$log,issGetPassTimes,notifyFactory,contactDetails,cityGeoCodes) {
+angular.module('iss').controller('IssDisplayPassTimes', ['$scope', '$http','$log', 'issGetPassTimes', 'notifyFactory','contactDetails','cityGeoCodes',
+	function($scope,$http,$log,issGetPassTimes,notifyFactory,contactDetails,cityGeoCodes) {
 
 		$scope.$log = $log;
 
@@ -10,8 +10,6 @@ angular.module('iss').controller('IssDisplayPassTimes', ['$scope', '$http', '$lo
 
 		cityGeoCodes.getData.then(function(result) {
 			$scope.cityGeoCodes = result.cityGeoCodes;
-
-			console.log($scope.cityGeoCodes);
 
 		})
 		.catch(function(err){
@@ -26,7 +24,7 @@ angular.module('iss').controller('IssDisplayPassTimes', ['$scope', '$http', '$lo
 			var nextContact = $scope.contactDetailsObj.length + 1;
 
 
-			alert($scope.contactDetails.cityGeoCode);
+
 			$scope.contactDetailsObj[nextContact] = {};
 			$scope.contactDetailsObj[nextContact].firstName = $scope.contactDetails.firstName;
 			$scope.contactDetailsObj[nextContact].lastName = $scope.contactDetails.lastName;
@@ -52,7 +50,7 @@ angular.module('iss').controller('IssDisplayPassTimes', ['$scope', '$http', '$lo
 				.catch(function(err){
 
 					notifyFactory.error(err);
-					console.log(err);
+
 
 				});
 
